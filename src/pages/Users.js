@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useState, Link} from 'react';
 import axios from 'axios';
 
 
@@ -20,6 +20,9 @@ export default function Users() {
             <td>{user.name}</td>
             <td>{user.email}</td>
             <td>{user.website}</td>
+            <td>
+                <Link className="btn btn-primary" to={"/users/" + user.id}>Voir</Link>
+            </td>
         </tr>
         )
     })
